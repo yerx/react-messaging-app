@@ -9,21 +9,21 @@ function Header() {
   return (
     <div className="header">
       <div className="header__left">
-      <Avatar
-        className="header__avatar"
-        alt="HerName"
-        src=""
-        // alt={user?.displayName}
-        // src={user?.photoURL}
-      />
-      <AccessTimeIcon />
+        <Avatar
+          className="header__avatar"
+          alt="HerName"
+          src=""
+          // alt={user?.displayName}
+          // src={user?.photoURL}
+        />
+        <AccessTimeIcon />
       </div>
       <div className="header__search">
-      <SearchIcon />
-      <input placeholder="Search" />
+        <SearchIcon />
+        <input placeholder="Search" />
       </div>
       <div className="header__right">
-      <HelpOutlineIcon />
+        <HelpOutlineIcon />
       </div>
     </div>
   )
