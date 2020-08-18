@@ -1,10 +1,32 @@
 import React from "react";
 import "./SidebarOption.css";
+import { useHistory } from "react-router-dom";
+import db from "../firebase.js";
 
-function SidebarOption({ Icon, title }) {
+function SidebarOption({ Icon, title, id, addChannelOption }) {
+  const history = useHistory();
+
+  const selectChannel = () => {
+    if (id) {
+      history.push(`/channel/${id}`);
+    } else {
+      history.push(title);
+    }
+  };
+
+  const addChannel = () => {
+    const channelName = prompt("Please enter the channel name");
+
+    if (channelName) {
+      db.collection("channels").add({ name: channelName });
+    }
+  };
+
   return (
-    <div className="sidebarOption">
-      {/* Only render an icon if one exists */}
+    <div
+      className="sidebarOption"
+      onClick={addChannelOption ? addChannel : selectChannel}
+    >
       {Icon && <Icon className="sidebarOption__icon" />}
       {Icon ? (
         <h3>{title}</h3>
