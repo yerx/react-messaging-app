@@ -59,7 +59,6 @@ function Sidebar() {
       {channels.map(channel => (
         <SidebarOption title={channel.name} id={channel.id} />
       ))}
-      {/* <SidebarOption .../> */}
     </div>
   );
 }
