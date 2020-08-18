@@ -19,3 +19,11 @@
 .sidebarOption__channel {
   padding: 10px 0;
 }
+
+.sidebarOption__hash {
+  padding: 10px;
+}
+
+.sidebarOption > h3 {
+  font-weight: 500;
+}
