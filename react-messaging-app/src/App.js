@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -14,8 +15,7 @@ function App() {
 
           <Switch>
             <Route path="/channel/:channelId">
-              <h1>CHAT SCREEN</h1>
-              {/* <Chat /> */}
+              <Chat />
             </Route>
             <Route>
               <h1>Hello world</h1>
