@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import db from "../firebase.js";
+import ChatInput from "./ChatInput.js";
 
 function Chat() {
   const { channelId } = useParams();
@@ -58,6 +59,7 @@ function Chat() {
           />
         ))}
       </div>
+      <ChatInput channelName={channelDetails?.name} channelId={channelId} />
     </div>
   );
 }
